@@ -1,0 +1,48 @@
+body {
+  max-width: 1128px;
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  list-style: none;
+  padding: 0;
+}
+
+.gallery-link {
+  display: block;
+  overflow: hidden;
+  border-radius: 12px;
+  transition:
+    transform 250ms ease,
+    box-shadow 250ms ease;
+}
+
+.gallery-link:hover {
+  transform: scale(1.05);
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6);
+}
+
+img {
+  width: 360px;
+  height: 200px;
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    max-width: 100%;
+  }
+
+  .gallery {
+    justify-content: center;
+  }
+
+  img {
+    width: 150px;
+    height: auto;
+    margin: 0 auto;
+  }
+}
