@@ -85,12 +85,6 @@ const markup = images
 
 ulElem.insertAdjacentHTML('beforeend', markup);
 
-ulElem.addEventListener('click', e => {
-  if (e.target.closest('a')) {
-    e.preventDefault();
-  }
-});
-
 const lightbox = new SimpleLightbox('.gallery a', {
   captionsData: 'alt',
   captionPosition: 'bottom',
