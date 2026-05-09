@@ -27,14 +27,6 @@ if (savedData) {
   formEl.elements.message.value = formData.message;
 }
 
-formEl.addEventListener('input', event => {
-  const { name, value } = event.target;
-
-  formData[name] = value.trim();
-
-  localStorage.setItem(STORAGE_KEY, JSON.stringify(formData));
-});
-
 formEl.addEventListener('submit', event => {
   event.preventDefault();
 
